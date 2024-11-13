@@ -2,12 +2,56 @@
 <html>
 <head>
   <title>Live Lokasi Anis Larassati</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+		.leaflet-container {
+			height: 100%;
+			width: 900px;
+			max-width: 100%;
+			max-height: 100%;
+		}
+		#map {
+			width: 100%;
+			height: 900px;
+			position: relative;
+		}
+		.back-button {
+			position: absolute;
+			bottom: 50px;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 1000; /* Pastikan tombol berada di atas peta */
+			padding: 10px 20px;
+			background-color: rgb(255, 162, 0);
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			cursor: pointer;
+			text-decoration: none;
+			color: rgb(239, 239, 239);
+			text-align: center;
+		}
+		.back-button:hover {
+			background-color: #76eaff;
+		}
+	</style>
+
 </head>
 <body>
-  <div id="map" style="width: 100%; height: 900px;"></div>
-  <script>
+
+	<div id="map">
+		<!-- Tombol Kembali di bawah dan tengah peta -->
+		<a href="index.html" class="back-button">Kembali</a>
+	</div>
+	<script>
     // Cek apakah geolokasi tersedia
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
