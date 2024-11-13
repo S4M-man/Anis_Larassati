@@ -4,32 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UTS Sistem Informasi Geografis 2024</title>
+    <style>
+        /* Background image for the entire page */
+        body {
+            background-image: url('Bg.png'); /* Ganti dengan path foto yang diinginkan */
+            background-size:auto; /* Menyesuaikan ukuran foto */
+            background-position: center; /* Posisikan di tengah */
+            background-attachment: fixed; /* Latar belakang tetap */
+            color: white; /* Teks berwarna putih agar lebih kontras dengan background */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        /* Centered container styling */
+        .container {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.6); /* Latar belakang transparan untuk kontras */
+            padding: 30px 60px;
+            border-radius: 30px;
+        }
+        /* Styling for the buttons */
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: rgb(9, 7, 7);
+            background-color: #4ca2af; /* Warna tombol hijau */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 0; /* Memberikan jarak antar tombol */
+        }
+        button:hover {
+            background-color: #45a049; /* Warna saat tombol di-hover */
+        }
+    </style>
 </head>
 <body>
-    <div style="text-align: center;">
+    <div class="container">
         <h2>Jawaban Nomer 5 UTS<br>SISTEM INFORMASI GEOGRAFIS 2024</h2>
         <p>DOSEN : ABDUR ROHMAN, M.Kom</p>
-    </div>
-    <div style="text-align: left;">
-        <p>Nama Mahasiswa : Anis Larassati</p>
-        <p>NIM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 2157201405</p>
-        <p>Prodi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Sistem Informasi</p>
-    </div>
+        <div style="text-align: left; margin-top: 20px;">
+            <p>Nama&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Anis Larassati</p> 
+            <p>NIM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 2157201405</p>
+            <p>Prodi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Sistem Informasi</p>
+        </div>
 
-    <!-- Button for navigating to the next page -->
-    <div style="text-align: center; margin-top: 20px;">
+        <!-- Buttons for navigation -->
         <button onclick="window.location.href='poin1.html';">
-            Alamat Rumah Anis Larassati
+            Alamat Rumah Anis Larassati 
         </button>
-    </div>
-    <div style="text-align: center; margin-top: 20px;">
         <button onclick="window.location.href='poin2.html';">
             Alamat STMIK Mercusuar
         </button>
-    </div>
-    <div style="text-align: center; margin-top: 20px;">
         <button onclick="window.location.href='poin3.html';">
-            Titik koordinat otomatis
+            Titik Koordinat Otomatis
         </button>
     </div>
 </body>
